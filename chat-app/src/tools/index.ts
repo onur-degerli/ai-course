@@ -7,7 +7,7 @@ async function callOpenAIWithTools() {
     {
       role: 'system',
       content:
-        'You are helpful asistane that gives information about the time of the day and order status.',
+        'You are helpful asistant that gives information about the time of the day and order status.',
     },
     {
       role: 'user',
@@ -47,10 +47,10 @@ async function callOpenAIWithTools() {
     tool_choice: 'auto',
   });
 
-  const willInvokeFunction = response.choices[0].finish_reason == 'tool_calls';
-  const toolCall = response.choices[0].message.tool_calls![0];
+  const willInvokeFunction = response.choices[0].finish_reason === 'tool_calls';
 
   if (willInvokeFunction) {
+    const toolCall = response.choices[0].message.tool_calls![0];
     const toolName = toolCall.function.name;
 
     if (toolName === 'getTimeOfDay') {
