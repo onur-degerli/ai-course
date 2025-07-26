@@ -1,0 +1,21 @@
+{
+  "name": "embeddings",
+  "version": "1.0.0",
+  "main": "index.js",
+  "scripts": {
+    "embedding": "node -r ts-node/register --env-file=.env src/emb/embeddings.ts",
+    "similarity": "node -r ts-node/register --env-file=.env src/emb/similarity.ts"
+  },
+  "keywords": [],
+  "author": "",
+  "license": "ISC",
+  "description": "",
+  "dependencies": {
+    "openai": "^5.10.2"
+  },
+  "devDependencies": {
+    "@types/node": "^24.1.0",
+    "ts-node": "^10.9.2",
+    "typescript": "^5.8.3"
+  }
+}
