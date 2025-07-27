@@ -3,7 +3,8 @@
   "version": "1.0.0",
   "main": "index.js",
   "scripts": {
-    "embedding-basic": "node -r ts-node/register --env-file=.env src/emb/main.ts"
+    "embedding-basic": "node -r ts-node/register --env-file=.env src/emb/main.ts",
+    "movie-recommendation": "node -r ts-node/register --env-file=.env src/movie-recommendation/main.ts"
   },
   "keywords": [],
   "author": "",
