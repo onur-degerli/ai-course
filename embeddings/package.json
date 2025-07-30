@@ -3,14 +3,23 @@
   "version": "1.0.0",
   "main": "index.js",
   "scripts": {
+    "chroma": "node -r ts-node/register --env-file=.env src/chroma/chroma.ts",
+    "chroma-with-openai": "node -r ts-node/register --env-file=.env src/chroma/chroma-with-openai.ts",
+    "chroma-app": "node -r ts-node/register --env-file=.env src/chroma/chroma-chat",
     "embedding-basic": "node -r ts-node/register --env-file=.env src/emb/main.ts",
-    "movie-recommendation": "node -r ts-node/register --env-file=.env src/movie-recommendation/main.ts"
+    "movie-recommendation": "node -r ts-node/register --env-file=.env src/movie-recommendation/main.ts",
+    "pinecone": "node -r ts-node/register --env-file=.env src/pinecone/pinecone.ts",
+    "pinecone-app": "node -r ts-node/register --env-file=.env src/pinecone/pinecone-app.ts"
   },
   "keywords": [],
   "author": "",
   "license": "ISC",
   "description": "",
   "dependencies": {
+    "@chroma-core/default-embed": "^0.1.8",
+    "@chroma-core/openai": "^0.1.7",
+    "@pinecone-database/pinecone": "^6.1.2",
+    "chromadb": "^3.0.10",
     "openai": "^5.10.2"
   },
   "devDependencies": {
