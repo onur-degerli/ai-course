@@ -3,7 +3,12 @@
   "version": "1.0.0",
   "main": "index.js",
   "scripts": {
-    "start": "node -r ts-node/register --env-file=.env src/Model.ts"
+    "start": "node -r ts-node/register --env-file=.env src/model.ts",
+    "prompt-template": "node -r ts-node/register --env-file=.env src/prompt-templates.ts",
+    "output-parser": "node -r ts-node/register --env-file=.env src/output-parsers.ts",
+    "rag-basic": "node -r ts-node/register --env-file=.env src/rag/basic.ts",
+    "rag-web": "node -r ts-node/register --env-file=.env src/rag/web.ts",
+    "rag-chroma-pdf": "node -r ts-node/register --env-file=.env src/rag/pdf.ts"
   },
   "keywords": [],
   "author": "",
@@ -11,7 +16,9 @@
   "description": "",
   "dependencies": {
     "@langchain/community": "^0.3.49",
-    "langchain": "^0.3.30"
+    "cheerio": "^1.1.2",
+    "langchain": "^0.3.30",
+    "pdf-parse": "^1.1.1"
   },
   "devDependencies": {
     "ts-node": "^10.9.2",
